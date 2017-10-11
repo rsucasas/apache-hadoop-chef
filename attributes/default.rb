@@ -1,35 +1,35 @@
 include_attribute "kagent"
 
-default.apache_hadoop.version                  = "2.7.3"
-default.apache_hadoop.hdfs.user                = "hdfs"
-default.apache_hadoop.group                    = "hadoop"
-default.apache_hadoop.dir                      = "/srv"
-default.apache_hadoop.base_dir                 = "#{node.apache_hadoop.dir}/hadoop"
-default.apache_hadoop.home                     = "#{node.apache_hadoop.dir}/hadoop-#{node.apache_hadoop.version}"
-default.apache_hadoop.logs_dir                 = "#{node.apache_hadoop.base_dir}/logs"
-default.apache_hadoop.tmp_dir                  = "#{node.apache_hadoop.base_dir}/tmp"
-default.apache_hadoop.conf_dir                 = "#{node.apache_hadoop.base_dir}/etc/hadoop"
-default.apache_hadoop.sbin_dir                 = "#{node.apache_hadoop.base_dir}/sbin"
-default.apache_hadoop.bin_dir                  = "#{node.apache_hadoop.base_dir}/bin"
-default.apache_hadoop.data_dir                 = "/var/data/hadoop"
-default.apache_hadoop.dn.data_dir              = "file://#{node.apache_hadoop.data_dir}/hdfs/dn"
-default.apache_hadoop.nn.name_dir              = "file://#{node.apache_hadoop.data_dir}/hdfs/nn"
+default['apache_hadoop']['version']                  = "2.7.3"
+default['apache_hadoop']['hdfs']['user']                = "hdfs"
+default['apache_hadoop']['group']                    = "hadoop"
+default['apache_hadoop']['dir']                      = "/srv"
+default['apache_hadoop']['base_dir']                 = "#{node.apache_hadoop.dir}/hadoop"
+default['apache_hadoop']['home']                     = "#{node.apache_hadoop.dir}/hadoop-#{node.apache_hadoop.version}"
+default['apache_hadoop']['logs_dir']                 = "#{node.apache_hadoop.base_dir}/logs"
+default['apache_hadoop']['tmp_dir']                  = "#{node.apache_hadoop.base_dir}/tmp"
+default['apache_hadoop']['conf_dir']                 = "#{node.apache_hadoop.base_dir}/etc/hadoop"
+default['apache_hadoop']['sbin_dir']                 = "#{node.apache_hadoop.base_dir}/sbin"
+default['apache_hadoop']['bin_dir']                  = "#{node.apache_hadoop.base_dir}/bin"
+default['apache_hadoop']['data_dir']                 = "/var/data/hadoop"
+default['apache_hadoop']['dn']['data_dir']              = "file://#{node.apache_hadoop.data_dir}/hdfs/dn"
+default['apache_hadoop']['nn']['name_dir']              = "file://#{node.apache_hadoop.data_dir}/hdfs/nn"
 
-default.apache_hadoop.nm.log_dir               = "#{node.apache_hadoop.logs_dir}/userlogs"
+default['apache_hadoop']['nm']['log_dir']               = "#{node.apache_hadoop.logs_dir}/userlogs"
 
-default.apache_hadoop.hdfs.user_home           = "/user"
-default.apache_hadoop.hdfs.active_nn           = true
-default.apache_hadoop.hdfs.blocksize           = "134217728"
+default['apache_hadoop']['hdfs']['user_home']           = "/user"
+default['apache_hadoop']['hdfs']['active_nn']           = true
+default['apache_hadoop']['hdfs']['blocksize']           = "134217728"
 
-default.apache_hadoop.download_url.primary     = "#{download_url}/hadoop-#{node.apache_hadoop.version}.tar.gz"
-default.apache_hadoop.download_url.secondary   = "https://archive.apache.org/dist/hadoop/core/hadoop-#{node.apache_hadoop.version}/hadoop-#{node.apache_hadoop.version}.tar.gz"
+default['apache_hadoop']['download_url']['primary']     = "#{download_url}/hadoop-#{node.apache_hadoop.version}.tar.gz"
+default['apache_hadoop']['download_url']['secondary']   = "https://archive.apache.org/dist/hadoop/core/hadoop-#{node.apache_hadoop.version}/hadoop-#{node.apache_hadoop.version}.tar.gz"
 
-default.apache_hadoop.install_protobuf         = "false"
-default.apache_hadoop.protobuf_url             = "https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz"
-default.apache_hadoop.hadoop_src_url           = "https://archive.apache.org/dist/hadoop/core/hadoop-#{node.apache_hadoop.version}/hadoop-#{node.apache_hadoop.version}-src.tar.gz"
-default.apache_hadoop.nn.http_port             = 50070
-default.apache_hadoop.dn.http_port             = 50075
-default.apache_hadoop.nn.port                  = 8020
+default['apache_hadoop']['install_protobuf']         = "false"
+default['apache_hadoop']['protobuf_url']             = "https://protobuf.googlecode.com/files/protobuf-2.5.0.tar.gz"
+default['apache_hadoop']['hadoop_src_url']           = "https://archive.apache.org/dist/hadoop/core/hadoop-#{node.apache_hadoop.version}/hadoop-#{node.apache_hadoop.version}-src.tar.gz"
+default['apache_hadoop']['nn']['http_port']             = 50070
+default['apache_hadoop']['dn']['http_port']             = 50075
+default['apache_hadoop']['nn']['port']                  = 8020
 
 default.apache_hadoop.nn.format_options        = "-format -nonInteractive"
 
