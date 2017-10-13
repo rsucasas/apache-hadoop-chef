@@ -3,7 +3,7 @@ source 'https://supermarket.chef.io'
 
 metadata
 
-cookbook 'kagent', github: "karamelchef/kagent-chef", branch: "master"
+cookbook 'kagent', github: "karamelchef/kagent-chef", branch: "v0.1"
 
 cookbook 'conda', github: "hopshadoop/conda-chef", branch: "master"
 cookbook 'java'
